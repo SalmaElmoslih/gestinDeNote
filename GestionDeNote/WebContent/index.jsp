@@ -18,7 +18,7 @@
         </div>
     </nav>
     <div class="titre">
-        <h2>gestion de note</h2>
+        <h2>gestion de not</h2>
     </div>
     
   
