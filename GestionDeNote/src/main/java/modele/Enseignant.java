@@ -9,7 +9,7 @@ import metier.NoteRep;
 
 @Entity
 public class Enseignant extends personne {
-	
+	public static final String ROLE_ENSEIGNANT = "ENSEIGNANT";
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "enseignant")
     private List<Notes> notes = new ArrayList<>();
 	
@@ -20,7 +20,7 @@ public class Enseignant extends personne {
 	
 	public Enseignant(String nom, String prenom, String cIN, int age, String email, String password) {
         super(nom, prenom, cIN, age, email, password);
-       
+        this.role = ROLE_ENSEIGNANT;
       
     }
     
@@ -37,7 +37,16 @@ public class Enseignant extends personne {
   
 
 
-    @Override
+    public Enseignant() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+
+
+	@Override
     public void consulterNotes(Matiere matiere, etudiant etudiant) {
 if (matiere != null && etudiant == null) {
             

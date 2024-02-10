@@ -22,7 +22,10 @@ public abstract class personne {
 
     public abstract void consulterNotes(Matiere matiere, etudiant etudiant);
  
-
+    // Constructeur par défaut
+    public personne() {
+        // Initialisation par défaut ou laisser vide si aucune initialisation n'est nécessaire
+    }
 
 
 

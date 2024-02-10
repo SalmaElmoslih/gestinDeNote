@@ -9,6 +9,12 @@ public class administrateur extends personne {
 	public static final String ROLE_ADMIN = "ADMIN";
 	String Poste;
 	
+	
+	 public administrateur() {
+	        // Appel au constructeur de la superclasse (personne)
+	        super();
+	    }
+
 	public administrateur(String nom, String prenom, String cIN, int age, String email, String password, String Poste) {
 		super(nom, prenom, cIN, age, email, password);
 		this.Poste=Poste;

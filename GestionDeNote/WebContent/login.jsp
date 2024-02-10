@@ -68,7 +68,7 @@
 <body>
     <div class="login-container">
         <h2>Connexion</h2>
-        <form action="login" method="post">
+        <form action="ctrll" method="post">
             <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="email" id="email" name="email" required>
@@ -80,12 +80,7 @@
             <div class="form-group">
                 <button type="submit">Se connecter</button>
             </div>
-            <%-- Afficher le message d'erreur --%>
-            <div class="error-message">
-                <c:if test="${not empty errorMessage}">
-                    ${errorMessage}
-                </c:if>
-            </div>
+         
         </form>
     </div>
 </body>

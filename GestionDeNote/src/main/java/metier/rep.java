@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
@@ -94,20 +95,42 @@ public class rep<T , U> {
 				.setParameter("t", t).getResultList();
 	}
 	
-	public personne findByEmail(String email) {
-        // Créer une requête JPQL pour récupérer la personne par son email
-        String jpql = "SELECT p FROM personne p WHERE p.email = :email";
-        TypedQuery<personne> query = em.createQuery(jpql, personne.class);
-        query.setParameter("email", email);
 
-        // Exécuter la requête et récupérer le résultat
-        try {
-            return query.getSingleResult();
-        } catch (Exception ex) {
-            // Gérer les erreurs ou les cas où aucun résultat n'est trouvé
-            return null;
-        }
-    }
+	
+//	  public T findByEmail(String email) {
+//	        EntityManager em = emf.createEntityManager();
+//	        try {
+//	            return em.find(EntityClass, email);
+//	        } finally {
+//	            if (em != null && em.isOpen()) {
+//	                em.close();
+//	            }
+//	        }
+//	    }
+//	
+	public personne findByEmail(String email) {
+	    try {
+	        // Create an EntityManager instance
+	        EntityManager em = emf.createEntityManager();
+
+	        // Use TypedQuery to create a query to find the person by email
+	        TypedQuery<personne> query = em.createQuery("SELECT p FROM personne p WHERE p.email = :email", personne.class);
+	        query.setParameter("email", email);
+
+	        // Execute the query and return the result
+	        return query.getSingleResult();
+	    } catch (NoResultException ex) {
+	        // Handle the case where no result is found
+	        return null;
+	    } finally {
+	        // Ensure that the EntityManager is closed after use
+	        if (em != null && em.isOpen()) {
+	            em.close();
+	        }
+	    }
+	}
+
+
 	
 	
 	/*public List<T> findnotes(U t) {

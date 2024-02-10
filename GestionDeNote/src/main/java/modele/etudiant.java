@@ -9,6 +9,7 @@ import javax.persistence.*;
 public class etudiant extends personne {
 	 @Column
     private String CNE;
+	 
 	 @ManyToMany
 	    @JoinTable(
 	        name = "ETUDIANT_MATIERE_NOTE",
@@ -16,11 +17,19 @@ public class etudiant extends personne {
 	        inverseJoinColumns = @JoinColumn(name = "MATIERE_ID")
 	    )
 	  private Set<Notes> notes = new HashSet<>();
-    
-    public etudiant(String nom, String prenom, String cIN, int age, String email, String password,String CNE) {
+		public static final String ROLE_ETUDIANT = "ETUDIANT";
+		
+		
+    public etudiant() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+	public etudiant(String nom, String prenom, String cIN, int age, String email, String password,String CNE) {
 		super(nom, prenom, cIN, age, email, password);
 		// TODO Auto-generated constructor stub
 		this.CNE=CNE;
+		this.role = ROLE_ETUDIANT;
 	}
     
     public String getCNE() {
