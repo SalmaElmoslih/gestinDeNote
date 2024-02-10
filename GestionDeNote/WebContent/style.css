@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Couleur de texte principale */
+    background: linear-gradient(to right, #2980b9, #6dd5fa); /* Dégradé de couleurs pour l'arrière-plan */
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Couleur de texte pour les titres */
+}
+
+.titre {
+    width: 600px;
+    height: 80px;
+    background-color: #fff; /* Couleur de fond pour le titre */
+    border: 3px solid #333; /* Bordure solide */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    margin: auto;
+    margin-top: 30px;
+}
+
+nav {
+    background-color: #333; /* Couleur de fond pour la barre de navigation */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    list-style-type: none;
+    float: left;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 30px;
+    color: #fff; /* Couleur de texte pour les liens de navigation */
+}
+
+.menu_accueil:hover,
+.menu_saisie:hover,
+.menu_liste:hover,
+.menu_contact:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Couleur de fond au survol */
+}
+
+.menu_accueil:hover {
+    border-top: 5px solid #e74c3c; /* Bordure rouge au survol */
+}
+
+.menu_saisie:hover {
+    border-top: 5px solid #f39c12; /* Bordure orange au survol */
+}
+
+.menu_liste:hover {
+    border-top: 5px solid #9b59b6; /* Bordure violette au survol */
+}
+
+.menu_contact:hover {
+    border-top: 5px solid #3498db; /* Bordure bleue au survol */
+}
+
+nav li:hover a {
+    padding: 15px 30px 20px 30px;
+}
+
+.table {
+    display: table;
+    margin: 0 auto;
+}
+
+.imageAccueil {
+    margin: auto;
+    margin-top: 100px;
+    width: 800px;
+}
+
+img {
+    width: 800px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.ligne {
+    display: block;
+    width: 800px;
+    height: 30px;
+}
+
+.labels {
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+    text-align: right;
+}
+
+.zones {
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+fieldset {
+    width: 800px;
+    margin: auto;
+}
+
+label {
+    text-align: right;
+}
+
+table {
+    text-align: center;
+    font-family: Arial;
+    width: 800px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+table,
+td,
+th {
+    border: 5px solid #333; /* Bordure solide */
+    border-collapse: separate;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff; /* Couleur de texte pour les cellules */
+}
+
+td,
+a {
+    font-size: 20px;
+    color: #fff; /* Couleur de texte pour les liens dans le tableau */
+}
+
+td,
+th {
+    background-color: rgba(255, 123, 123, 1); /* Couleur de fond pour les cellules */
+    border-radius: 20px;
+}
