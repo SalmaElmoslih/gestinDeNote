@@ -33,7 +33,7 @@ public abstract class personne {
 	public personne(String nom, String prenom, String cIN, int age, String email, String password) {
 		this.nom = nom;
 		this.prenom = prenom;
-		CIN = cIN;
+		this.CIN = cIN;
 		this.age = age;
 		this.email = email;
 		this.password = password;

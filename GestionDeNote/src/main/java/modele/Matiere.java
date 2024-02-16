@@ -55,6 +55,24 @@ public class Matiere {
 	public void setControlle(String controlle) {
 		this.controlle = controlle;
 	}
+	
+	
+
+	public Enseignant getEnseignant() {
+		return enseignant;
+	}
+
+	public void setEnseignant(Enseignant enseignant) {
+		this.enseignant = enseignant;
+	}
+
+	public Modules getModule() {
+		return module;
+	}
+
+	public void setModule(Modules module) {
+		this.module = module;
+	}
 
 	@Override
 	public String toString() {

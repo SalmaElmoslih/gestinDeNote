@@ -28,6 +28,8 @@ public class EnseignantRep extends rep<Enseignant,String> {
 
 
 
+
+
 	 /*public List<Notes> getNotes(Enseignant enseignant) {
 		    return em.createQuery("SELECT n FROM Notes n WHERE n.enseignant = :enseignant", Notes.class)
 		             .setParameter("enseignant", enseignant)

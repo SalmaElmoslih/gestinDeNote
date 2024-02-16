@@ -9,7 +9,9 @@ import metier.NoteRep;
 
 @Entity
 public class Enseignant extends personne {
+	
 	public static final String ROLE_ENSEIGNANT = "ENSEIGNANT";
+	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "enseignant")
     private List<Notes> notes = new ArrayList<>();
 	

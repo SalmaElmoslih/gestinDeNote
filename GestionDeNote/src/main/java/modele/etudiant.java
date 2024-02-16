@@ -16,14 +16,20 @@ public class etudiant extends personne {
 	        joinColumns = @JoinColumn(name = "ETUDIANT_ID"),
 	        inverseJoinColumns = @JoinColumn(name = "MATIERE_ID")
 	    )
+	 
 	  private Set<Notes> notes = new HashSet<>();
-		public static final String ROLE_ETUDIANT = "ETUDIANT";
+	 
+	  public static final String ROLE_ETUDIANT = "ETUDIANT";
 		
 		
     public etudiant() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
+    
+
+   
+
 
 	public etudiant(String nom, String prenom, String cIN, int age, String email, String password,String CNE) {
 		super(nom, prenom, cIN, age, email, password);
@@ -57,6 +63,15 @@ public class etudiant extends personne {
         note.getEtudiants().remove(this); // Bidirectional relationship
     }*/
 	
+	
+	public static String getRoleEtudiant() {
+		return ROLE_ETUDIANT;
+	}
+
+
+
+
+
 	@Override
 	public void consulterNotes(Matiere matiere, etudiant etudiant) {
 		// TODO Auto-generated method stub

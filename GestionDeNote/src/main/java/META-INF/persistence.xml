@@ -16,8 +16,8 @@
             <property name="hibernate.hbm2ddl.auto" value="create"/>
             -->
  
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
-             <property name="hibernate.ejb.entitymanager_factory_name" value="validate"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+             <property name="hibernate.ejb.entitymanager_factory_name" value="update"/>
             
         </properties>
 
